@@ -1,0 +1,23 @@
+{
+   "name": "TextAid",
+   "version": "1.0.7",
+   "description": "Edit (or just filter) the currently selected text area using a web request.",
+   "background_page": "background.html",
+   "page_action": {
+      "default_icon": "icon-16.png",
+      "default_title": "Edit/filter the current text area"
+   },
+   "content_scripts": [ {
+      "js": [ "page-prep.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_idle",
+      "all_frames": true
+   } ],
+   "options_page": "options.html",
+   "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+   "icons": {
+      "128": "icon-128.png",
+      "48": "icon-48.png",
+      "16": "icon-16.png"
+   }
+}
